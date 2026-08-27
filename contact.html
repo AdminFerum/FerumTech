@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/ferumtechtransparent.png" type="image/x-icon">
+
+    <title>Contact Us - Ferum Technical</title>
+
+    <!-- Main Website CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+
+    <!-- Contact Page CSS -->
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/css/intlTelInput.css"
+>
+
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <!-- LOGO -->
+    <a href="index.html" class="logo">
+        <img src="image/navbarlogo.png" alt="FERUM TECHNICAL">
+        <span class="logo-text-group">
+        <span class="logo-subtext">Ferum Technical Sdn. Bhd.</span>
+        <span class="logo-subtext">Ferum Solutions Sdn. Bhd.</span>
+    </span>
+    </a>
+
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+        <img src="image/hamburgericon.png" alt="Menu">
+    </button>
+
+    <!-- NAVIGATION -->
+    <ul class="nav-menu" id="nav-menu">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+
+        <li>
+            <a href="about.html">About Us</a>
+        </li>
+
+        <li>
+            <a href="news.html">News</a>
+        </li>
+
+        <li>
+            <a href="services.html">Services</a>
+        </li>
+
+        <li>
+            <a href="contact.html">Contact Us</a>
+        </li>
+    </ul>
+
+</nav>
+
+
+        <!-- =========================
+         CONTACT HERO + OFFICES/MAP
+    ========================== -->
+
+    <section class="contact-hero">
+
+        <div class="contact-hero-bg">
+             <img src="image/weld.jpg" alt="">
+        </div>
+
+        <div class="page-title-pill">
+            <span class="title-dark">Contact</span>
+            <span class="title-accent">Us</span>
+        </div>
+
+        <div class="info-map-wrap">
+
+            <!-- OFFICES + CONTACT DETAILS CARD -->
+            <div class="glass-card offices-card">
+
+                <h3 class="card-label">
+                    <i class="fa-solid fa-location-dot"></i> Our Offices
+                </h3>
+
+                
+
+                <div class="office-box">
+                    <h4>Ferum Technical Sdn. Bhd.</h4>
+                     <span class="detail-sub">66, Jalan Jambu 6, Taman Kota Masai, 81700 Pasir Gudang, Johor Darul Ta'zim</span>
+            
+                </div>
+
+                <div class="office-divider"></div>
+
+                <h3 class="card-label">
+                    <i class="fa-solid fa-phone-volume"></i> Contact Details
+                </h3>
+
+                
+
+                <div class="detail-item">
+                    <span class="detail-main"><a href="tel:+60182048120">+60 18 204 8120</a></span>
+                    <span class="detail-sub">Johor Bahru Office</span>
+                </div>
+
+                <div class="detail-item">
+                    <span class="detail-main"><a href="mailto:admin@ferumtechnical.com">admin@ferumtechnical.com</a></span>
+                    <span class="detail-sub">Email</span>
+                </div>
+
+            </div>
+
+            <!-- MAP CARD -->
+            <div class="glass-card map-card">
+
+                <h2>Our Locations</h2>
+
+                <div class="location-tabs">
+                    
+
+                    <button
+                        type="button"
+                        class="tab-btn"
+                        data-office="jb"
+                        data-map="https://www.google.com/maps?q=Ferum+Technical+Sdn+Bhd+Johor+Bahru+Malaysia&output=embed"
+                        data-directions="https://www.google.com/maps/dir/?api=1&destination=Ferum+Technical+Sdn+Bhd+Johor+Bahru+Malaysia"
+                    >
+                        More
+                    </button>
+                </div>
+
+                <div class="map-frame">
+                    <iframe
+                        id="office-map"
+                        src="https://www.google.com/maps?q=Ferum+Technical+Sdn+Bhd+Kuala+Lumpur+Malaysia&output=embed"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </div>
+
+               
+
+                
+                 
+
+            </div>
+
+        </div>
+
+    </section>
+    
+
+
+    <!-- =========================
+         SEND US A MESSAGE
+    ========================== -->
+
+    <!--<main>
+
+        <section class="contact-section">
+
+            <div class="contact-container">
+
+                <div class="contact-form-container">
+
+                    <h2>Send Us a Message</h2>
+
+                    <form
+                        class="contact-form"
+                        name="contact-form"
+                        method="POST"
+                        data-netlify="true"
+                        data-netlify-honeypot="bot-field"
+                        action="thanks.html"
+                    >
+
+                        <input type="hidden" name="form-name" value="contact">
+
+                        <p class="hidden-field">
+                            <label>
+                                Don't fill this out if you're human:
+                                <input name="bot-field">
+                            </label>
+                        </p>
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="name">Name <span>*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span>*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="012-345 6789" required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span>*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Choose Services <span>*</span></label>
+                            <select id="service" name="service" required>
+                                <option value="">- Select Service -</option>
+                                <option value="welding-technology">Welding Technology</option>
+                                <option value="engineering-inspection">Engineering Inspection</option>
+                                <option value="material-testing">Material Testing</option>
+                                <option value="technical-training">Technical Training</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message <span>*</span></label>
+                            <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-button">Submit Form</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="index-footer">
+
+         <p>
+
+          © 2026 Ferum Technical Resources Sdn. Bhd.
+          All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+    
+ 
+    <script src="js/script.js"></script>
+     
+    <script>
+      var directionsBase = {
+          jb: "https://www.google.com/maps/dir/?api=1&destination=Ferum+Technical+Sdn+Bhd+Johor+Bahru+Malaysia"
+      };
+
+      var mapUrls = {
+          jb: "https://www.google.com/maps?q=Ferum+Technical+Sdn+Bhd+Johor+Bahru+Malaysia&output=embed"
+      };
+
+      var activeOffice = "jb";
+ 
+      document.querySelectorAll(".tab-btn").forEach(function (btn) {
+             btn.addEventListener("click", function () {
+              document.querySelectorAll(".tab-btn").forEach(function (b) {
+                b.classList.remove("active");
+              });
+              btn.classList.add("active");
+
+              activeOffice = btn.dataset.office;
+              document.getElementById("office-map").src = mapUrls[activeOffice];
+              document.getElementById("directions-link").href = directionsBase[activeOffice];
+          });
+      });
+
+      document.getElementById("directions-link").addEventListener("click", function (e) {
+          if (!navigator.geolocation) {
+              return; // no geolocation support, fall back to the plain destination link
+          }
+
+          e.preventDefault();
+          var fallbackUrl = directionsBase[activeOffice];
+          var link = this;
+
+          navigator.geolocation.getCurrentPosition(
+              function (position) {
+                  var origin = position.coords.latitude + "," + position.coords.longitude;
+                  window.open(fallbackUrl + "&origin=" + origin, "_blank", "noopener");
+              },
+              function () {
+                  // permission denied or failed — just open the normal link
+                  window.open(fallbackUrl, "_blank", "noopener");
+              }
+          );
+      });
+     </script>
+
+     
+       <!-- =========================
+         WHATSAPP FLOAT BUTTON
+    ========================== -->
+
+    <a
+        href="https://wa.me/60163881365?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services"
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener"
+        aria-label="Chat with us on WhatsApp"
+    >
+        <span class="whatsapp-icon-circle">
+               <img src="image/whatsappicon.png" alt="WhatsApp">
+        </span>
+        <span class="whatsapp-text">WhatsApp Now</span>
+    </a>
+
+     
+
+</body>
+</html>
