@@ -1,0 +1,607 @@
+/* CONTACT HERO */
+.index-contact-hero {
+    position: relative;
+    min-height: 450px;
+    background-image: url("image/weld.jpg");
+    background:linear-gradient(30deg,#07264a,#0066cc);
+    background-size: cover;
+    background-position: left;
+    display: flex;
+    align-items: left;
+    overflow: hidden;
+}
+
+/* DARK OVERLAY */
+.index-contact-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    background-image: url("image/weld.jpg");
+}
+
+/* CONTENT */
+.index-contact-content {
+    position: absolute;
+    z-index: 2;
+    width: 90%;
+    max-width: 1100px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: left;
+}
+
+
+.index-contact-content h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.index-contact-content p {
+    max-width: 550px;
+    margin-bottom: 45px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* BUTTON */
+.contact-btn {
+    position: absolute;
+    display: inline-block;
+    padding: 14px 28px;
+    background: #0088cc;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #006fa8;
+    transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+.index-contact-hero {
+        min-height: 380px;
+        background-position: center;
+    }
+
+.index-contact-content {
+        width: 90%;
+        position: static;
+        transform: none;
+        left: 0;
+        padding: 40px 20px;
+        text-align: center;
+        margin: 0 auto;
+}
+
+.index-contact-content h2 {
+        font-size: 28px;
+}
+
+.index-contact-content p {
+        font-size: 14px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+.contact-btn {
+        position: static;
+        display: inline-block;
+        margin-top: 10px;
+    }
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: calc(100% - 50px);
+    max-width: 1600px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 1px;
+
+    /* Glassmorphism */
+    background: rgba(253, 253, 253, 0.703);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 0px solid rgba(94, 93, 93, 0.4);
+    border-radius: 27px;
+
+    box-shadow:
+        0 2px 25px rgba(0, 0, 0, 0.327);
+
+    z-index: 9999;
+}
+
+/* LOGO */
+
+.logo {
+    position: 0;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    text-decoration: none;
+    margin-left: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.logo img {
+    width: 130px;
+    height: auto;
+    display: block;
+}
+
+.logo-text-group {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #163b65;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.logo-subtext {
+    font-size: 16px;
+    font-weight: 700;
+    color: #163b65;
+    white-space: nowrap;
+}
+
+
+
+/* NAVIGATION */
+
+.nav-menu {
+    
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    margin-right: 120px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu li {
+
+    list-style: none;
+    gap: 100px;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 10px 2px;
+    text-decoration: none;
+    letter-spacing: -0.3px;
+    color: #060606;
+    font-size: 16px;
+    font-weight: 490;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.nav-menu :hover {
+     color: #00599b;
+}
+
+@media (max-width: 768px) {
+
+    .nav-menu {
+     display: flex;
+     align-items: center;
+     gap: 0px;
+     margin-right: 120px;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+    
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a:active,
+    .nav-menu a:focus {
+        background: transparent !important;
+        color: #222 !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    .nav-menu a {
+         color: #000000;
+        -webkit-tap-highlight-color: transparent;
+        -tap-highlight-color: transparent;
+    }
+
+}
+
+/* =========================================================
+   HAMBURGER BUTTON
+========================================================= */
+
+.hamburger {
+
+    display: none;
+
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    transition: 0.3s ease;
+}
+
+.hamburger:hover {
+    background: rgba(0, 113, 193, 0.15);
+    transform: scale(1.05);
+}
+
+.hamburger img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+}
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        top: 12px;
+        width: calc(100% - 10px);
+        height: 70px;
+        padding: 0 15px;
+        border-radius: 35px;
+        border: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        border: none !important;
+        box-shadow: none !important;
+
+    }
+
+    /* LOGO */
+    .logo {
+     position: 0;
+     display: flex;
+     align-items: center;
+     text-decoration: none;
+     margin-left: 1px;
+     margin-bottom: 10px;
+     gap: 0px;
+    }
+
+    .logo img {
+     width: 85px;
+     height: auto;
+     display: block;
+    
+    }
+
+    .logo-text-group {
+     display: flex;
+     flex-direction: column;
+     line-height: 1.2;
+    }
+
+    .logo-subtext {
+     font-size: 13px;
+     font-weight: 700;
+     color: #163b65;
+     white-space: nowrap;
+    }
+
+    /* CIRCLE HAMBURGER */
+    .hamburger {
+        display: flex;
+
+        width: 52px;
+        height: 52px;
+
+        border-radius: 50%;
+
+        background: rgba(255, 255, 255, 0.203);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+
+        border: 1px solid rgba(255, 255, 255, 0);
+
+        box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.641);
+    }
+
+    /* MOBILE MENU */
+    .nav-menu {
+    position: absolute;
+
+    top: 78px;
+    right: 0;
+    left: auto;
+
+    width: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 5px;
+    padding: 0;
+
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: none;
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height 0.4s ease,
+                padding 0.3s ease;
+}
+
+    /* MENU OPEN */
+    .nav-menu.active {
+    max-height: 400px;
+    padding: 12px 0;
+    border: 1px solid rgba(255,255,255,0.6);
+     }
+
+    /* MENU ITEMS */
+    .nav-menu li {
+        width: 100%;
+        text-align: right;
+        margin-right: 60px;
+    }
+
+    .nav-menu a {
+
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+        font-size: 16px;
+        text-align: left;
+        border-radius: 20px;
+        margin-right: 20px;
+    }
+
+
+}
+
+
+
+/* =========================================================
+   HAMBURGER ANIMATION
+========================================================= */
+
+
+
+@media (max-width: 768px) {
+
+    hr {
+        display: none !important;
+    }
+
+    nav,
+    .navbar {
+        border-bottom: 0 !important;
+        box-shadow: none !important;
+    }
+
+    nav::before,
+    nav::after,
+    .navbar::before,
+    .navbar::after {
+        display: none !important;
+        content: none !important;
+    }
+
+}
+
+/* =========================================================
+   WHATSAPP FLOAT BUTTON
+========================================================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9998;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 22px 8px 8px;
+
+    background: #25d366;
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 0 0 6px rgba(37, 211, 102, 0.15),
+        0 8px 20px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 0 8px rgba(37, 211, 102, 0.2),
+        0 12px 26px rgba(0, 0, 0, 0.35);
+}
+
+.whatsapp-float:active {
+    transform: translateY(0) scale(0.97);
+}
+
+.whatsapp-icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+
+    width: 40px;
+    height: 40px;
+
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.whatsapp-icon-circle img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
+
+.whatsapp-text {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .whatsapp-float {
+        right: 16px;
+        bottom: 16px;
+        padding: 6px 18px 6px 6px;
+    }
+
+    .whatsapp-icon-circle {
+        width: 34px;
+        height: 34px;
+        font-size: 17px;
+    }
+
+    .whatsapp-text {
+        font-size: 14px;
+    }
+
+}
+
+
+/* Optional: icon-only on very small screens to save space */
+@media (max-width: 380px) {
+
+    .whatsapp-text {
+        display: none;
+    }
+
+    .whatsapp-float {
+        padding: 6px;
+    }
+
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 600px;
+    touch-action: pan-y;
+}
+
+
+
+/* =========================
+   SLIDER ARROWS
+========================= */
+
+@media (max-width: 768px) {
+
+    .home-hero-text{
+        padding:110px 20px 50px;
+    }
+
+    .home-hero-text h2{
+        font-size:26px;
+    }
+
+    .home-hero-text p{
+        font-size:15px;
+    }
+
+    .slider {
+        height: 450px;
+    }
+
+    .slider-arrow {
+        width: 38px;
+        height: 38px;
+        font-size: 22px;
+    }
+
+    .slider-arrow.prev { left: 10px; }
+    .slider-arrow.next { right: 10px; }
+
+}
+
+@media (max-width: 480px) {
+    .slider {
+        height: 380px;
+    }
+}
+
+.logo {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.logo img {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    pointer-events: none; /* clicks pass through to the parent <a> */
+}

@@ -1,0 +1,748 @@
+/* ==================================================================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.news.body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.6;
+}
+
+.news img{
+    width:100%;
+    display:block;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 605px;
+    margin: 40px auto;
+    overflow: visible;
+}
+
+.news section{
+    padding:80px 0;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.news-hero{
+    
+    position:relative;
+    height:420px;
+    background:linear-gradient(30deg,#0d4c92,#0066cc);
+    display:flex;
+    justify-content:left;
+    align-items:left;
+
+
+}
+
+.news .hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.news-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0, 0, 0, 0);
+}
+
+.news-hero .hero-content{
+    position:relative;
+    z-index: 2;
+    text-align:left;
+    width:90%;
+    max-width:700px;
+}
+
+.hero-content h4{
+    color:#ff5b5b;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:15px;
+}
+
+.hero-content h1{
+
+    position:relative;
+    top: 40%;
+    right: 110px;
+    margin: 0 0 15px;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 700px;
+}
+
+.hero-content p{
+
+    position:relative;
+    top: 38%;
+    right: 100px;
+    margin: 0 0 15px;
+    margin-top: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.news h2,
+.events h2,
+.newsletter h2{
+
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#163b65;
+
+}
+
+/* =========================
+   NEWS
+========================= */
+
+.news-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,2fr));
+    gap:35px;
+
+}
+
+.news-card{
+
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+.news-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.news-card img{
+
+    height:230px;
+    object-fit:cover;
+
+}
+
+.news-content{
+
+    padding:25px;
+
+}
+
+.news-content span{
+
+    color:#111111;
+    font-size:14px;
+
+}
+
+.news-content h3{
+    
+    font-size: 20px;
+    margin:15px 0;
+    color:#1d3557;
+
+}
+
+.news-content p{
+    font-size: 14px;
+    color:#111111;
+    margin-bottom:20px;
+
+}
+
+.news-content a{
+    position:relative;
+    top: 30px;
+    text-decoration:none;
+    color:#c0392b;
+    font-weight:600;
+
+}
+
+/* =========================
+   EVENTS
+========================= */
+
+.container h2 {
+
+    text-align:center;
+    font-size:35px;
+    margin-bottom:50px;
+    color:#163b65;
+
+}
+
+
+.event-list{
+
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    max-width: auto;
+    max-height: auto;
+}
+
+.event-card{
+
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    display:flex;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.event-card img{
+
+    width:300px;
+    height:220px;
+    object-fit:cover;
+
+}
+
+.event-info{
+
+    padding:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+}
+
+.event-info span{
+    text-align: left;
+    font-size: 16px;
+    color:#777;
+
+}
+
+.event-info h3{
+    text-align: left;
+    font-size: 20px;
+    margin:12px 0;
+    color:#1d3557;
+
+}
+
+.event-info p{
+    text-align: left;
+    font-size: 16px;
+    margin:10px 0;
+    color:#1d3557;
+
+}
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+.newsletter{
+
+    background:#1d3557;
+    color:#fff;
+    text-align:center;
+
+}
+
+.newsletter p{
+
+    margin:20px 0 35px;
+
+}
+
+.newsletter form{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+
+}
+
+.newsletter input{
+
+    width:350px;
+    max-width:100%;
+    padding:15px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+
+}
+
+.newsletter button{
+
+    padding:15px 35px;
+    background:#e63946;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.newsletter button:hover{
+
+    background:#c62828;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.news-hero{
+    height:320px;
+}
+
+.news-hero .hero-content{
+    position:relative;
+    top: 0%;
+    width:100%;
+    max-width:100%;
+}
+
+.news-hero .container h1{
+    position:relative;
+    margin:0 0 15px;
+    font-size:30px;
+    text-align: left;
+}
+
+.hero-content p{
+    position:static;
+    left:0;
+    margin:0 auto;
+    text-align:center;
+    max-width:100%;
+    font-size:15px;
+}
+
+.event-card{
+    flex-direction:column;
+}
+
+.event-card img{
+    width:100%;
+    height:240px;
+}
+
+}
+
+@media(max-width:600px){
+
+.news-hero{
+    height:320px;
+}
+
+.news-hero .hero-content{
+    width:100%;
+    padding:0 15px;
+}
+
+.hero-content h1{
+    top:0;
+    right:0;
+    font-size:26px;
+    line-height:1.3;
+}
+
+.hero-content p{
+    top:0;
+    right:0;
+    font-size:14px;
+}
+
+.news h2,
+.events h2,
+.newsletter h2{
+    font-size:30px;
+}
+
+.news-grid{
+    grid-template-columns:1fr;
+}
+
+.newsletter form{
+    flex-direction:column;
+    align-items:center;
+}
+
+.newsletter input,
+.newsletter button{
+    width:100%;
+}
+
+}
+
+/* ===========================
+SOCIAL MEDIA SECTION
+=========================== */
+
+.social-section{
+
+    padding:90px 8%;
+    background:#f5f8fc;
+
+}
+
+.social-title{
+
+    text-align:center;
+    margin-bottom:60px;
+
+}
+
+.social-title h2{
+
+    font-size:42px;
+    color:#163b65;
+    margin-bottom:15px;
+
+}
+
+.social-title p{
+
+    color:#111111;
+    font-size:18px;
+
+}
+
+/* Cards */
+
+.social-container {
+    display: grid;
+    grid-template-columns: repeat(3, 380px);
+    justify-content: center;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* Individual Card */
+.social-card {
+    width: 380px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    transition: .35s;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.social-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+/* Header */
+
+.social-header{
+
+    padding:18px;
+
+    text-align:center;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+/* Different Colors */
+
+.youtube{
+
+    background:#c40333;
+
+}
+
+.tiktok{
+
+    background:#111;
+
+}
+
+.instagram{
+
+    background:linear-gradient(45deg,#833AB4,#E1306C,#FCAF45);
+
+}
+
+/* Image */
+.social-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+/* Content */
+.social-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.social-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1b1b1b;
+}
+
+.social-content p {
+    font-size: 14px;
+    color: #111111;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.social-buttons a {
+
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 16px;
+    border-radius: 16px;
+    font-weight: 600;
+    transition: .3s;
+    
+
+
+
+}
+
+/* ==========================================
+   SOCIAL BUTTONS - GLASSMORPHISM-like
+========================================== */
+
+.social-buttons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 20px;
+
+    border-radius: 16px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    /* Glass Effect */
+    background: rgba(255, 255, 255, 0);
+
+    backdrop-filter: blur(0px) saturate(180%);
+    -webkit-backdrop-filter: blur(0px) saturate(180%);
+
+    /* Glass Edge */
+    border: 1px solid rgba(255, 255, 255, 0);
+
+    /* Glass Depth */
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.45),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.08),
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease,
+        color 0.25s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   BUTTON 1 - BLUE
+========================================== */
+
+.social-buttons a:first-child {
+
+    
+    color: #ffffff;
+
+      /* Slightly dark normal state */
+    background: rgba(13, 109, 253, 0.992);
+
+    border-color: rgba(255, 255, 255, 0);
+
+}
+
+
+/* Button 1 Hover */
+
+.social-buttons a:first-child:hover {
+
+    /* Clearer / more transparent */
+    background: rgba(13, 109, 253, 0.77);
+
+    color: #ffffff;
+
+    border-color: rgba(255, 255, 255, 0.45);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.5),
+        0 10px 30px rgba(13, 110, 253, 0.25);
+
+}
+
+
+/* ==========================================
+   BUTTON 2 - RED / WATCH
+========================================== */
+
+.social-buttons a.watch {
+
+    color: #ffffff;
+
+     /* Slightly dark normal state */
+    background: rgba(185, 23, 14, 0.77);
+
+    border-color: rgba(255, 255, 255, 0.25);
+
+}
+
+
+/* Button 2 Hover */
+
+.social-buttons a.watch:hover {
+
+    /* Clearer / more transparent */
+    background: rgba(217, 72, 65, 0.25);
+
+    color: #ffffff;
+
+    border-color: rgba(255, 255, 255, 0.45);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.5),
+        0 10px 30px rgba(217, 72, 65, 0.25);
+
+}
+
+
+/* ==========================================
+   ACTIVE / PRESS EFFECT
+========================================== */
+
+.social-buttons a:active {
+
+    transform: translateY(0) scale(0.97);
+
+    box-shadow:
+        inset 0 1px 2px rgba(0, 0, 0, 0.15),
+        0 4px 12px rgba(0, 0, 0, 0.15);
+
+}
+
+/* Mobile */
+
+@media (max-width: 950px) {
+    .social-container {
+        grid-template-columns: repeat(2, 280px);
+    }
+}
+
+@media (max-width: 650px) {
+    .social-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .social-card {
+        width: 280px;
+    }
+
+    .social-card img {
+        height: 300px;
+    }
+}
+
+/* =========================
+   VIDEO EMBEDS
+========================= */
+
+.video-wrapper{
+    display:flex;
+    justify-content:center;
+    padding:20px 15px;
+}
+
+.video-embed[data-platform="youtube"]{
+    position:relative;
+    width:100%;
+    padding-top:56.25%; /* 16:9 ratio */
+}
+
+.video-embed[data-platform="youtube"] iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border:0;
+    border-radius:10px;
+}
+
+.tiktok-embed,
+.instagram-media{
+    margin:0 auto !important;
+    max-width:100% !important;
+}

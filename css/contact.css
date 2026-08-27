@@ -1,0 +1,513 @@
+/* =========================================================
+   CONTACT PAGE
+========================================================= */
+
+
+/* =========================
+   HERO + FLOATING GLASS CARDS
+========================= */
+
+.contact-hero {
+    position: relative;
+    width: 100%;
+    padding: 160px 5% 100px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    isolation: isolate;
+}
+
+/* Blurred background photo */
+.contact-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.contact-hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(8px) brightness(0.92);
+    transform: scale(1.1); /* hides blurred edges */
+}
+
+.contact-hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* ==========================================
+   APPLE-STYLE LIQUID GLASS - PAGE TITLE PILL
+========================================== */
+
+.page-title-pill {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    /* Liquid glass */
+    background: rgba(255, 255, 255, 0.636);
+    backdrop-filter: blur(18px) saturate(180%);
+    -webkit-backdrop-filter: blur(18px) saturate(180%);
+
+    /* Soft glass edge */
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 40px;
+
+    padding: 15px 34px;
+
+    /* Apple-like depth */
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.65),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.08),
+        0 8px 25px rgba(0, 0, 0, 0.16),
+        0 2px 6px rgba(255, 255, 255, 0.12);
+
+    margin-bottom: 50px;
+
+    /* Smooth interaction */
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* TITLE TEXT */
+.page-title-pill .title-dark {
+    color: #111111;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+/* SUBTLE HOVER */
+.page-title-pill:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.28);
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.75),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.06),
+        0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+.page-title-pill .title-accent {
+    color: #163b65;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* Two-card row */
+.info-map-wrap {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px) saturate(160%);
+    -webkit-backdrop-filter: blur(16px) saturate(160%);
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 22px;
+
+    padding: 40px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #163b65;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   OFFICES CARD
+========================= */
+
+.office-box {
+    background: rgba(255, 255, 255, 0.219);
+    border-radius: 12px;
+    border: 0.2px solid rgba(255, 255, 255, 0.359);
+    border-width: 1px;
+    padding: 16px 18px;
+    margin-bottom: 14px;
+}
+
+.office-box h4 {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 8px;
+}
+
+.office-box p {
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #333333;
+}
+
+.office-box a {
+    text-align: left;
+    color: #0878c9;
+    text-decoration: none;
+}
+
+.office-box a:hover {
+    text-decoration: underline;
+    color: #00599b;
+}
+
+.office-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.12);
+    margin: 26px 0 22px;
+}
+
+.detail-item {
+    margin-bottom: 14px;
+}
+
+.detail-main {
+    display: block;
+    text-align: left;
+    font-size: 10px;
+    font-weight: 600;
+    color: #111111;
+}
+
+.detail-main a {
+    font-size: 16px;
+    color: #111111;
+    text-decoration: none;
+}
+
+.detail-main a:hover {
+    
+    color: #00599b;
+}
+
+.detail-sub {
+    padding-bottom: 15px;
+    text-align: left;
+    display: block;
+    font-size: 13px;
+    color: #444;
+}
+
+
+/* =========================
+   MAP CARD
+========================= */
+
+.map-card h2 {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 20px;
+}
+
+.location-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.tab-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.7);
+
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.tab-btn.active {
+    background: #c0392b;
+    border-color: #c0392b;
+    color: #ffffff;
+}
+
+.map-frame {
+    width: 100%;
+    height: 340px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.map-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.get-directions-btn {
+    display: inline-block;
+    padding: 12px 26px;
+
+    background: #c0392b;
+    color: #ffffff;
+    text-decoration: none;
+
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.25s ease;
+}
+
+.get-directions-btn:hover {
+    background: #a93226;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MESSAGE FORM SECTION (kept from original design)
+========================================================= */
+
+.contact-section {
+    width: 100%;
+    background: #ffffff;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr;
+
+    padding: 70px 0;
+}
+
+.contact-form-container h2 {
+    margin: 0 0 40px;
+    text-align: left;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #111111;
+}
+
+.contact-form-container {
+    width: 100%;
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 22px;
+    grid-template-columns: 1fr;
+}
+
+.form-group label {
+    display: block;
+    grid-template-columns: 1fr;
+    margin-bottom: 9px;
+    color: #111111;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group label span {
+    color: #e53935;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+    background: #f7f7f7;
+    padding: 13px 15px;
+    color: #333333;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #8d969e;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    background: #ffffff;
+    border-color: #0878c9;
+    box-shadow: 0 0 0 3px rgba(8, 120, 201, 0.10);
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 14px 28px;
+
+    background: rgba(0, 102, 204, 0.997);
+    backdrop-filter: blur(5px) saturate(180%);
+    -webkit-backdrop-filter: blur(5px) saturate(180%);
+
+    border: 1px solid rgba(94, 93, 93, 0.4);
+    border-radius: 16px;
+
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.45),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.08),
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+
+    margin-top: 26px;
+}
+
+.submit-button:hover {
+    background: rgba(0, 102, 204, 0.66);
+    transform: translateY(-2px);
+    box-shadow:
+        inset 0 1px 2px rgba(0, 102, 204, 0.55),
+        0 12px 30px rgba(0, 0, 0, 0.22);
+    color: #e3e3e3;
+}
+
+.submit-button:active {
+    transform: translateY(0) scale(0.97);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .contact-hero {
+        padding: 130px 5% 70px;
+    }
+
+    .info-map-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .glass-card {
+        padding: 30px;
+    }
+
+    .page-title-pill .title-dark,
+    .page-title-pill .title-accent {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .contact-hero {
+        padding: 120px 4% 60px;
+    }
+
+    .page-title-pill {
+        padding: 12px 24px;
+        margin-bottom: 35px;
+    }
+
+    .glass-card {
+        padding: 24px;
+        border-radius: 18px;
+    }
+
+    .map-frame {
+        height: 260px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-container {
+        width: 92%;
+        padding: 45px 0;
+    }
+}
+
+
+/* =========================
+   NETLIFY SPAM PROTECTION
+========================= */
+
+.hidden-field {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

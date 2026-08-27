@@ -1,0 +1,109 @@
+/* =========================
+   THANK YOU PAGE
+========================= */
+
+.thank-you {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #f5f7fa;
+
+    padding: 30px;
+}
+
+.thank-you-box {
+    width: 90%;
+    max-width: 550px;
+
+    background: #ffffff;
+
+    padding: 50px 40px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.10);
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0878c9;
+
+    color: #ffffff;
+
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.thank-you-box h1 {
+    margin-bottom: 15px;
+
+    font-size: 36px;
+
+    color: #111111;
+}
+
+.thank-you-box p {
+    color: #666666;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+.back-home {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 13px 25px;
+
+    border-radius: 5px;
+
+    background: #0878c9;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    background: #005fa8;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
